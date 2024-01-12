@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorramir <jorramir@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 09:35:54 by jorramir          #+#    #+#             */
-/*   Updated: 2024/01/12 16:36:37 by jorramir         ###   ########.fr       */
+/*   Created: 2024/01/12 12:04:47 by jorramir          #+#    #+#             */
+/*   Updated: 2024/01/12 13:19:33 by jorramir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef LIBFT_H
+#include "libft.h"
+//#include <stdio.h>
 
-# define LIBFT_H
+int	ft_isascii(int c)
+{
+	return (c >= 0 && c <= 127);
+}
+/*
+int	main(void)
+{
+	unsigned char	x;
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_strlen(const char *str);
-
-#endif
+	x = 241;
+	if (ft_isascii(x))
+	{
+		printf("%c is ascii\n", x);
+	}
+	else
+	{
+		printf("%c is not ascii\n", x);
+	}
+	x = 'a';
+	if (ft_isascii(x))
+	{
+		printf("%c is ascii\n", x);
+	}
+	else
+	{
+		printf("%c is not ascii\n", x);
+	}
+}*/

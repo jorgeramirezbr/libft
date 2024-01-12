@@ -6,11 +6,11 @@
 /*   By: jorramir <jorramir@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:28:34 by jorramir          #+#    #+#             */
-/*   Updated: 2024/01/12 09:59:03 by jorramir         ###   ########.fr       */
+/*   Updated: 2024/01/12 14:56:35 by jorramir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
@@ -21,7 +21,7 @@ int	main(void)
 {
 	char	a;
 
-	a = '@';
+	a = 'z';
 	if (ft_isalpha(a))
 	{
 		printf("%c is alpha", a);

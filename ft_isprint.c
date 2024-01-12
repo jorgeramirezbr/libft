@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorramir <jorramir@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 09:35:54 by jorramir          #+#    #+#             */
-/*   Updated: 2024/01/12 16:36:37 by jorramir         ###   ########.fr       */
+/*   Created: 2024/01/12 12:50:23 by jorramir          #+#    #+#             */
+/*   Updated: 2024/01/12 15:14:59 by jorramir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef LIBFT_H
+#include "libft.h"
+//#include <stdio.h>
 
-# define LIBFT_H
+int	isprint(int c)
+{
+	return (c >= 32 && c <= 126);
+}
+/*
+int	main(void)
+{
+	char	x;
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_strlen(const char *str);
-
-#endif
+	x = ' ';
+	if (isprint(x))
+	{
+		printf("'%c' is printable\n", x);
+	}
+	else
+	{
+		printf("'%c' is not printable\n", x);
+	}
+}*/
