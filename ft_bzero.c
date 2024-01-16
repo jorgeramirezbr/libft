@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorramir <jorramir@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 09:35:54 by jorramir          #+#    #+#             */
-/*   Updated: 2024/01/16 18:24:21 by jorramir         ###   ########.fr       */
+/*   Created: 2024/01/16 16:54:02 by jorramir          #+#    #+#             */
+/*   Updated: 2024/01/16 18:20:24 by jorramir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef LIBFT_H
+#include "libft.h"
+//#include <stdio.h>
 
-# define LIBFT_H
-# include <stddef.h>
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*ptr;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
+	ptr = s;
+	while (n > 0)
+	{
+		*ptr = 0;
+		ptr++;
+		n--;
+	}
+}
+/*
+int	main(void)
+{
+	char			str[] = "Hello World";
+	unsigned long	i;
 
-#endif
+	i = 0;
+	printf("string: %s\n", str);
+	printf("my_bzero: ");
+	ft_bzero(str, 3);
+	while (i < sizeof(str))
+	{
+		printf("%c", str[i]);
+		i++;
+	}
+	return (0);
+}*/

@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorramir <jorramir@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 15:46:26 by jorramir          #+#    #+#             */
-/*   Updated: 2024/01/13 19:38:04 by jorramir         ###   ########.fr       */
+/*   Created: 2024/01/13 18:36:30 by jorramir          #+#    #+#             */
+/*   Updated: 2024/01/16 16:52:33 by jorramir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <string.h>
 //#include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
+	unsigned char	*ptr;
+	unsigned char	value;
 
-	i = 0;
-	while (s[i] != '\0')
+	ptr = b;
+	value = (unsigned char)c;
+	while (len > 0)
 	{
-		i++;
+		*ptr = value;
+		ptr++;
+		len--;
 	}
-	return (i);
+	return (b);
 }
 /*
 int	main(void)
 {
-	char	*str;
+	char	str[10] = "Holas";
+	char	*res;
 
-	str = "Esternocleidomastoideo";
-	printf("'%s' has %zu characters\n", str, ft_strlen(str));
+	printf("string: %s\n", str);
+	res = ft_memset(str, 42, 3);
+	printf("org_memset: %s\n", memset(str, 42, 3));
+	printf("mio_memset: %s\n", res);
+	return (0);
 }*/
