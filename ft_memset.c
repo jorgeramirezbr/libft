@@ -6,13 +6,15 @@
 /*   By: jorramir <jorramir@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 18:36:30 by jorramir          #+#    #+#             */
-/*   Updated: 2024/01/16 16:52:33 by jorramir         ###   ########.fr       */
+/*   Updated: 2024/01/17 16:57:30 by jorramir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 //#include <string.h>
 //#include <stdio.h>
 
+/*The memset() function writes len bytes of value c (converted to an
+  unsigned char) to the string b*/
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*ptr;

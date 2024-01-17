@@ -6,12 +6,13 @@
 /*   By: jorramir <jorramir@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 15:46:26 by jorramir          #+#    #+#             */
-/*   Updated: 2024/01/13 19:38:04 by jorramir         ###   ########.fr       */
+/*   Updated: 2024/01/17 16:58:57 by jorramir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 //#include <stdio.h>
 
+/*The strlen() function computes the length of the string s*/
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
